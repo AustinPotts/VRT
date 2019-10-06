@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0AX-0n-war" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2888" y="1311"/>
+            <point key="canvasLocation" x="2981" y="1285"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Swx-3H-NmI">
@@ -311,14 +311,201 @@
                     <connections>
                         <segue destination="4Mk-PX-a5b" kind="relationship" relationship="viewControllers" id="Oez-VB-TGv"/>
                         <segue destination="Ri1-36-iav" kind="relationship" relationship="viewControllers" id="v6A-Ii-oF7"/>
+                        <segue destination="Iez-gb-iIc" kind="relationship" relationship="viewControllers" id="zkb-Q4-Vs8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Aj-ga-WnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1" y="441"/>
         </scene>
+        <!--Help-->
+        <scene sceneID="Nqs-h5-AdN">
+            <objects>
+                <viewController id="qVT-gQ-Oyt" customClass="DetailsReportViewController" customModule="VRT_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hmo-le-7od">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="QJk-27-ckQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do I start?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktA-t3-FTY">
+                                <rect key="frame" x="61" y="213" width="293" height="72"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VRQuestion" translatesAutoresizingMaskIntoConstraints="NO" id="Iz7-AQ-JcP">
+                                <rect key="frame" x="7" y="330" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="hf5-oC-5QU"/>
+                                    <constraint firstAttribute="height" constant="400" id="nUR-ex-ex7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QJk-27-ckQ" firstAttribute="trailing" secondItem="UN2-63-169" secondAttribute="trailing" id="66P-Nm-c5v"/>
+                            <constraint firstItem="ktA-t3-FTY" firstAttribute="leading" secondItem="UN2-63-169" secondAttribute="leading" constant="61" id="Cyf-5g-nzQ"/>
+                            <constraint firstItem="UN2-63-169" firstAttribute="trailing" secondItem="ktA-t3-FTY" secondAttribute="trailing" constant="60" id="EFn-DU-TLE"/>
+                            <constraint firstItem="UN2-63-169" firstAttribute="trailing" secondItem="Iz7-AQ-JcP" secondAttribute="trailing" constant="7" id="Hr4-1j-yZz"/>
+                            <constraint firstItem="QJk-27-ckQ" firstAttribute="top" secondItem="UN2-63-169" secondAttribute="top" id="OMe-O3-0vb"/>
+                            <constraint firstItem="Iz7-AQ-JcP" firstAttribute="top" secondItem="ktA-t3-FTY" secondAttribute="bottom" constant="45" id="RR9-Pe-37V"/>
+                            <constraint firstItem="Iz7-AQ-JcP" firstAttribute="leading" secondItem="UN2-63-169" secondAttribute="leading" constant="7" id="Xbz-B0-6gI"/>
+                            <constraint firstItem="QJk-27-ckQ" firstAttribute="leading" secondItem="UN2-63-169" secondAttribute="leading" id="blY-Vw-RbY"/>
+                            <constraint firstItem="UN2-63-169" firstAttribute="bottom" secondItem="Iz7-AQ-JcP" secondAttribute="bottom" constant="83" id="jLn-gm-fNd"/>
+                            <constraint firstAttribute="bottom" secondItem="QJk-27-ckQ" secondAttribute="bottom" id="skO-vf-VGN"/>
+                            <constraint firstItem="ktA-t3-FTY" firstAttribute="top" secondItem="UN2-63-169" secondAttribute="top" constant="125" id="vUy-3z-c2y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UN2-63-169"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Help" id="zDe-Ji-KoS">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="chy-9g-4Tw">
+                            <connections>
+                                <segue destination="FVB-Fj-0EQ" kind="show" identifier="NextOneSegue" id="7uz-34-1f0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Iw-9M-Ho0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1997" y="2014"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="nnh-U9-kHY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iez-gb-iIc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Help" id="rdR-8o-Qua"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ftZ-Uc-KDi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qVT-gQ-Oyt" kind="relationship" relationship="rootViewController" id="kCl-gb-J5m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVF-Eb-Go8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919" y="2014"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="lZa-mN-jpS">
+            <objects>
+                <viewController id="FVB-Fj-0EQ" customClass="DetailsReportViewController" customModule="VRT_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="35i-uI-yfS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="W0t-ru-GgF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="Choose Your Game!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4T-hs-j6q">
+                                <rect key="frame" x="0.0" y="194" width="414" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Game" translatesAutoresizingMaskIntoConstraints="NO" id="5k1-aw-VGb">
+                                <rect key="frame" x="7" y="319" width="400" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Step 1:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5E-gj-XHJ">
+                                <rect key="frame" x="0.0" y="108" width="414" height="56"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c5E-gj-XHJ" firstAttribute="trailing" secondItem="pdH-KI-44Y" secondAttribute="trailing" id="Hgw-If-bk1"/>
+                            <constraint firstAttribute="bottom" secondItem="W0t-ru-GgF" secondAttribute="bottom" id="LT6-H2-AiD"/>
+                            <constraint firstItem="W0t-ru-GgF" firstAttribute="leading" secondItem="pdH-KI-44Y" secondAttribute="leading" id="RLr-K4-xGU"/>
+                            <constraint firstItem="W0t-ru-GgF" firstAttribute="top" secondItem="pdH-KI-44Y" secondAttribute="top" id="Rml-RU-8YN"/>
+                            <constraint firstItem="c5E-gj-XHJ" firstAttribute="leading" secondItem="pdH-KI-44Y" secondAttribute="leading" id="nfu-KG-RHJ"/>
+                            <constraint firstItem="W0t-ru-GgF" firstAttribute="trailing" secondItem="pdH-KI-44Y" secondAttribute="trailing" id="ohz-EW-g7i"/>
+                            <constraint firstItem="c5E-gj-XHJ" firstAttribute="top" secondItem="pdH-KI-44Y" secondAttribute="top" constant="20" id="wEr-KG-rcW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pdH-KI-44Y"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Help" id="E1C-gg-g2a">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="jI6-yr-vaM">
+                            <connections>
+                                <segue destination="qnT-Hn-REM" kind="show" identifier="NextTwoSegue" id="irg-bY-wUy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ngp-i7-CmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2857" y="2014"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="n9U-LI-Tn9">
+            <objects>
+                <viewController id="qnT-Hn-REM" customClass="DetailsReportViewController" customModule="VRT_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mRS-ah-qBb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="bKW-nm-XOd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Your Progress!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTk-rB-GgR">
+                                <rect key="frame" x="10" y="213" width="394" height="72"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progress" translatesAutoresizingMaskIntoConstraints="NO" id="Nyz-cQ-Bvv">
+                                <rect key="frame" x="7" y="330" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="QBv-k4-yWi"/>
+                                    <constraint firstAttribute="width" constant="400" id="Veq-Jv-G0C"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQk-a1-nDH">
+                                <rect key="frame" x="0.0" y="108" width="414" height="56"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VDp-4V-xdX" firstAttribute="bottom" secondItem="Nyz-cQ-Bvv" secondAttribute="bottom" constant="83" id="GB1-Ks-u8m"/>
+                            <constraint firstItem="VDp-4V-xdX" firstAttribute="trailing" secondItem="UTk-rB-GgR" secondAttribute="trailing" constant="10" id="J6W-OS-l1L"/>
+                            <constraint firstItem="VDp-4V-xdX" firstAttribute="trailing" secondItem="Nyz-cQ-Bvv" secondAttribute="trailing" constant="7" id="Mm3-cu-Z0I"/>
+                            <constraint firstItem="UTk-rB-GgR" firstAttribute="top" secondItem="VDp-4V-xdX" secondAttribute="top" constant="125" id="Oai-Mc-m5D"/>
+                            <constraint firstItem="bKW-nm-XOd" firstAttribute="trailing" secondItem="VDp-4V-xdX" secondAttribute="trailing" id="UkG-St-BYJ"/>
+                            <constraint firstItem="VDp-4V-xdX" firstAttribute="trailing" secondItem="yQk-a1-nDH" secondAttribute="trailing" id="Vuk-dt-9j9"/>
+                            <constraint firstItem="bKW-nm-XOd" firstAttribute="top" secondItem="VDp-4V-xdX" secondAttribute="top" id="ZWA-A9-3ai"/>
+                            <constraint firstAttribute="bottom" secondItem="bKW-nm-XOd" secondAttribute="bottom" id="a3K-bI-car"/>
+                            <constraint firstItem="UTk-rB-GgR" firstAttribute="leading" secondItem="VDp-4V-xdX" secondAttribute="leading" constant="10" id="dGb-h3-cOw"/>
+                            <constraint firstItem="yQk-a1-nDH" firstAttribute="top" secondItem="VDp-4V-xdX" secondAttribute="top" constant="20" id="jYb-t9-tyj"/>
+                            <constraint firstItem="bKW-nm-XOd" firstAttribute="leading" secondItem="VDp-4V-xdX" secondAttribute="leading" id="kRH-tj-P0D"/>
+                            <constraint firstItem="yQk-a1-nDH" firstAttribute="leading" secondItem="VDp-4V-xdX" secondAttribute="leading" id="mJ4-Y4-f09"/>
+                            <constraint firstItem="Nyz-cQ-Bvv" firstAttribute="top" secondItem="UTk-rB-GgR" secondAttribute="bottom" constant="45" id="yva-V2-Ewb"/>
+                            <constraint firstItem="Nyz-cQ-Bvv" firstAttribute="leading" secondItem="VDp-4V-xdX" secondAttribute="leading" constant="7" id="zja-Ce-mZL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VDp-4V-xdX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Help" id="h9I-Pj-vrT">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="vwc-nf-bPi"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2t-z4-yWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3759" y="2014"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background1" width="1125" height="2436"/>
+        <image name="Game" width="512" height="512"/>
+        <image name="VRQuestion" width="512" height="512"/>
+        <image name="progress" width="275" height="275"/>
     </resources>
 </document>
