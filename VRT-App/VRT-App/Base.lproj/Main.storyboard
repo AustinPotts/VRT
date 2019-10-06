@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Mk-PX-a5b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dQD-yq-L1t">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LogIn-->
         <scene sceneID="o6a-kQ-rgA">
             <objects>
                 <viewController id="4Mk-PX-a5b" sceneMemberID="viewController">
@@ -32,11 +32,293 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YhJ-IE-xTy"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="LogIn" id="RwY-Ut-Uiu"/>
                     <navigationItem key="navigationItem" id="Yxp-Q7-Fdo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8w-b0-Ti9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075.3623188405797" y="128.57142857142856"/>
+            <point key="canvasLocation" x="1132" y="129"/>
+        </scene>
+        <!--Progress Reports-->
+        <scene sceneID="b9j-GP-vzG">
+            <objects>
+                <tableViewController id="Agz-ha-FYQ" customClass="ProgressReportsTableViewController" customModule="VRT_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p1d-aA-o8d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.43179284205234547" green="0.61712721708460061" blue="1" alpha="0.82213184931506844" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReportCell" id="2qP-DW-weS">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2qP-DW-weS" id="2hq-da-rfB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="akH-ot-7IM" kind="show" identifier="ReportDetailSegue" id="aHE-0H-3R9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Agz-ha-FYQ" id="zW4-xg-NYC"/>
+                            <outlet property="delegate" destination="Agz-ha-FYQ" id="1ty-1W-m7a"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Progress Reports" id="bho-GL-tzx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rNs-uR-Lq4">
+                            <connections>
+                                <segue destination="dyy-xR-9D6" kind="show" identifier="AddReportSegue" id="yyk-Lp-ijZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oyB-1X-KA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1997.1014492753625" y="859.82142857142856"/>
+        </scene>
+        <!--Add Progress Report-->
+        <scene sceneID="bst-6G-oyO">
+            <objects>
+                <viewController id="dyy-xR-9D6" customClass="AddReportViewController" customModule="VRT_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ys3-Do-UPv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="VMU-l5-So5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fXc-kE-dNM">
+                                <rect key="frame" x="20" y="138" width="374" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f3-Rg-Xzm">
+                                        <rect key="frame" x="0.0" y="0.0" width="164.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Report ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ARe-EI-1bW">
+                                        <rect key="frame" x="172.5" y="0.0" width="201.5" height="35"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yYa-Wb-a7A">
+                                <rect key="frame" x="20" y="240" width="374" height="122"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNQ-57-jFe">
+                                        <rect key="frame" x="0.0" y="0.0" width="177.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Report Details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0N3-QC-dvZ">
+                                        <rect key="frame" x="0.0" y="43" width="354" height="79"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0N3-QC-dvZ" secondAttribute="trailing" constant="20" id="0hZ-2S-t0P"/>
+                                    <constraint firstAttribute="bottom" secondItem="0N3-QC-dvZ" secondAttribute="bottom" id="HWu-9k-HTN"/>
+                                    <constraint firstItem="0N3-QC-dvZ" firstAttribute="top" secondItem="GNQ-57-jFe" secondAttribute="bottom" constant="8" id="HXn-KU-9hk"/>
+                                    <constraint firstItem="0N3-QC-dvZ" firstAttribute="leading" secondItem="yYa-Wb-a7A" secondAttribute="leading" id="LDp-vo-xqq"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T7F-Zd-2vp">
+                                <rect key="frame" x="20" y="448" width="374" height="259"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Used:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hp-vJ-5Ym">
+                                        <rect key="frame" x="0.0" y="0.0" width="145.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kq7-fh-1kL">
+                                        <rect key="frame" x="0.0" y="43" width="320" height="216"/>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="VMU-l5-So5" secondAttribute="bottom" id="2TF-LP-Crs"/>
+                            <constraint firstItem="yeT-i8-Vah" firstAttribute="trailing" secondItem="T7F-Zd-2vp" secondAttribute="trailing" constant="20" id="2Vw-bJ-NhY"/>
+                            <constraint firstItem="fXc-kE-dNM" firstAttribute="leading" secondItem="yeT-i8-Vah" secondAttribute="leading" constant="20" id="3LV-bD-ebK"/>
+                            <constraint firstItem="T7F-Zd-2vp" firstAttribute="top" secondItem="yYa-Wb-a7A" secondAttribute="bottom" constant="86" id="3jV-Oj-55M"/>
+                            <constraint firstItem="fXc-kE-dNM" firstAttribute="top" secondItem="yeT-i8-Vah" secondAttribute="top" constant="50" id="6i9-Ud-ivU"/>
+                            <constraint firstItem="VMU-l5-So5" firstAttribute="leading" secondItem="yeT-i8-Vah" secondAttribute="leading" id="EG3-E1-Baj"/>
+                            <constraint firstItem="yeT-i8-Vah" firstAttribute="trailing" secondItem="fXc-kE-dNM" secondAttribute="trailing" constant="20" id="HLX-e9-Wln"/>
+                            <constraint firstItem="VMU-l5-So5" firstAttribute="trailing" secondItem="yeT-i8-Vah" secondAttribute="trailing" id="IeQ-y9-9cG"/>
+                            <constraint firstItem="yYa-Wb-a7A" firstAttribute="leading" secondItem="yeT-i8-Vah" secondAttribute="leading" constant="20" id="VF3-RF-hOC"/>
+                            <constraint firstItem="yYa-Wb-a7A" firstAttribute="top" secondItem="fXc-kE-dNM" secondAttribute="bottom" constant="67" id="e5C-FI-bjt"/>
+                            <constraint firstItem="yeT-i8-Vah" firstAttribute="bottom" secondItem="T7F-Zd-2vp" secondAttribute="bottom" constant="106" id="eAw-Ow-zId"/>
+                            <constraint firstItem="T7F-Zd-2vp" firstAttribute="leading" secondItem="yeT-i8-Vah" secondAttribute="leading" constant="20" id="hB3-2C-5Ll"/>
+                            <constraint firstItem="VMU-l5-So5" firstAttribute="top" secondItem="yeT-i8-Vah" secondAttribute="top" id="jX1-Bp-DQq"/>
+                            <constraint firstItem="yeT-i8-Vah" firstAttribute="bottom" secondItem="yYa-Wb-a7A" secondAttribute="bottom" constant="451" id="mkr-31-LXa"/>
+                            <constraint firstItem="yeT-i8-Vah" firstAttribute="trailing" secondItem="yYa-Wb-a7A" secondAttribute="trailing" constant="20" id="tUg-IJ-7Wg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yeT-i8-Vah"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Progress Report" id="jfV-jg-4Gp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="KCX-d7-XYT">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="dyy-xR-9D6" id="Y3r-Nv-jcY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="gamePicker" destination="Kq7-fh-1kL" id="FhH-ZS-JSX"/>
+                        <outlet property="reportDetailsTextView" destination="0N3-QC-dvZ" id="q9E-Nv-HGq"/>
+                        <outlet property="reportNameTextView" destination="ARe-EI-1bW" id="kZK-iL-hF8"/>
+                        <outlet property="saveButton" destination="KCX-d7-XYT" id="pSt-sk-lH7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ds-95-CrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2887" y="590"/>
+        </scene>
+        <!--Progress-->
+        <scene sceneID="0oe-sq-00R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ri1-36-iav" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Progress" id="Z20-To-qai"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OyV-oQ-2qh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Agz-ha-FYQ" kind="relationship" relationship="rootViewController" id="8Dg-1m-TCP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73T-iZ-fnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086.9565217391305" y="859.82142857142856"/>
+        </scene>
+        <!--View Progress Report-->
+        <scene sceneID="5nk-Bn-rwX">
+            <objects>
+                <viewController id="akH-ot-7IM" customClass="DetailsReportViewController" customModule="VRT_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i68-Y8-4bd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="dyU-6Q-Z3y">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yGh-pu-N8v">
+                                <rect key="frame" x="20" y="138" width="374" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hn-VZ-6bL">
+                                        <rect key="frame" x="0.0" y="0.0" width="164.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Report ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6he-fU-bHy">
+                                        <rect key="frame" x="172.5" y="0.0" width="201.5" height="35"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RFa-V9-Xf2">
+                                <rect key="frame" x="20" y="240" width="374" height="122"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7S-Nx-ATc">
+                                        <rect key="frame" x="0.0" y="0.0" width="177.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Report Details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ssi-rI-ouc">
+                                        <rect key="frame" x="0.0" y="43" width="354" height="79"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ssi-rI-ouc" firstAttribute="leading" secondItem="RFa-V9-Xf2" secondAttribute="leading" id="cMx-hs-iQh"/>
+                                    <constraint firstAttribute="bottom" secondItem="ssi-rI-ouc" secondAttribute="bottom" id="fwq-Ub-zl5"/>
+                                    <constraint firstAttribute="trailing" secondItem="ssi-rI-ouc" secondAttribute="trailing" constant="20" id="j2q-cc-jv5"/>
+                                    <constraint firstItem="ssi-rI-ouc" firstAttribute="top" secondItem="f7S-Nx-ATc" secondAttribute="bottom" constant="8" id="sT2-Zo-ZJz"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M5g-6n-H7C">
+                                <rect key="frame" x="20" y="448" width="374" height="259"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Used:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kem-uh-rfH">
+                                        <rect key="frame" x="0.0" y="0.0" width="145.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOO-aw-cLN">
+                                        <rect key="frame" x="0.0" y="43" width="320" height="216"/>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RFa-V9-Xf2" firstAttribute="leading" secondItem="gJB-5I-hHH" secondAttribute="leading" constant="20" id="3oc-Do-7Cy"/>
+                            <constraint firstItem="gJB-5I-hHH" firstAttribute="trailing" secondItem="M5g-6n-H7C" secondAttribute="trailing" constant="20" id="51U-kR-kpv"/>
+                            <constraint firstItem="yGh-pu-N8v" firstAttribute="top" secondItem="gJB-5I-hHH" secondAttribute="top" constant="50" id="8la-H9-NgA"/>
+                            <constraint firstItem="yGh-pu-N8v" firstAttribute="leading" secondItem="gJB-5I-hHH" secondAttribute="leading" constant="20" id="99Y-1E-jUf"/>
+                            <constraint firstItem="RFa-V9-Xf2" firstAttribute="top" secondItem="yGh-pu-N8v" secondAttribute="bottom" constant="67" id="9QR-We-xMr"/>
+                            <constraint firstItem="dyU-6Q-Z3y" firstAttribute="leading" secondItem="gJB-5I-hHH" secondAttribute="leading" id="RAw-uS-Yzd"/>
+                            <constraint firstItem="gJB-5I-hHH" firstAttribute="bottom" secondItem="M5g-6n-H7C" secondAttribute="bottom" constant="106" id="X2G-83-kxP"/>
+                            <constraint firstAttribute="bottom" secondItem="dyU-6Q-Z3y" secondAttribute="bottom" id="aFX-nF-Vhy"/>
+                            <constraint firstItem="M5g-6n-H7C" firstAttribute="top" secondItem="RFa-V9-Xf2" secondAttribute="bottom" constant="86" id="c4P-o6-5yu"/>
+                            <constraint firstItem="dyU-6Q-Z3y" firstAttribute="trailing" secondItem="gJB-5I-hHH" secondAttribute="trailing" id="cwu-NQ-9Y2"/>
+                            <constraint firstItem="gJB-5I-hHH" firstAttribute="trailing" secondItem="RFa-V9-Xf2" secondAttribute="trailing" constant="20" id="iRd-Yh-YXv"/>
+                            <constraint firstItem="M5g-6n-H7C" firstAttribute="leading" secondItem="gJB-5I-hHH" secondAttribute="leading" constant="20" id="pO5-tU-VpQ"/>
+                            <constraint firstItem="gJB-5I-hHH" firstAttribute="trailing" secondItem="yGh-pu-N8v" secondAttribute="trailing" constant="20" id="rCF-vD-55l"/>
+                            <constraint firstItem="gJB-5I-hHH" firstAttribute="bottom" secondItem="RFa-V9-Xf2" secondAttribute="bottom" constant="451" id="xOx-Mx-3C5"/>
+                            <constraint firstItem="dyU-6Q-Z3y" firstAttribute="top" secondItem="gJB-5I-hHH" secondAttribute="top" id="y7o-d3-S3X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gJB-5I-hHH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="View Progress Report" id="Flm-pJ-vLP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="LiL-pg-OWm"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="detailsTextView" destination="ssi-rI-ouc" id="cfU-bj-rCG"/>
+                        <outlet property="nameTextView" destination="6he-fU-bHy" id="gvM-ao-mwC"/>
+                        <outlet property="picker" destination="lOO-aw-cLN" id="aq3-re-WJs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0AX-0n-war" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2888" y="1311"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Swx-3H-NmI">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dQD-yq-L1t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b7N-CN-9do">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4Mk-PX-a5b" kind="relationship" relationship="viewControllers" id="Oez-VB-TGv"/>
+                        <segue destination="Ri1-36-iav" kind="relationship" relationship="viewControllers" id="v6A-Ii-oF7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Aj-ga-WnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="441"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background1" width="1125" height="2436"/>
+    </resources>
 </document>

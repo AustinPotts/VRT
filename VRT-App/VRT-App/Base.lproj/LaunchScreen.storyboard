@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TestBG" translatesAutoresizingMaskIntoConstraints="NO" id="6Bg-iQ-nWA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WomenVR3" translatesAutoresizingMaskIntoConstraints="NO" id="6Bg-iQ-nWA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TestBG" width="1228" height="1838"/>
+        <image name="WomenVR3" width="750" height="1334"/>
     </resources>
 </document>

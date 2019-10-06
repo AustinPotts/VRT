@@ -12,6 +12,9 @@
 		45472FD92349A39A00EB74F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45472FD82349A39A00EB74F4 /* Assets.xcassets */; };
 		45472FDC2349A39A00EB74F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45472FDA2349A39A00EB74F4 /* LaunchScreen.storyboard */; };
 		45472FE42349A79D00EB74F4 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FE32349A79D00EB74F4 /* LogInView.swift */; };
+		45472FE62349B74000EB74F4 /* ProgressReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FE52349B74000EB74F4 /* ProgressReportsTableViewController.swift */; };
+		45472FE82349B75F00EB74F4 /* AddReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FE72349B75F00EB74F4 /* AddReportViewController.swift */; };
+		45472FEA2349B77B00EB74F4 /* DetailsReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FE92349B77B00EB74F4 /* DetailsReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		45472FDB2349A39A00EB74F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45472FDD2349A39A00EB74F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45472FE32349A79D00EB74F4 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		45472FE52349B74000EB74F4 /* ProgressReportsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressReportsTableViewController.swift; sourceTree = "<group>"; };
+		45472FE72349B75F00EB74F4 /* AddReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReportViewController.swift; sourceTree = "<group>"; };
+		45472FE92349B77B00EB74F4 /* DetailsReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 		45472FC52349A39800EB74F4 = {
 			isa = PBXGroup;
 			children = (
+				45472FEB2349B7A000EB74F4 /* View Controllers */,
 				45472FE32349A79D00EB74F4 /* LogInView.swift */,
 				45472FD02349A39800EB74F4 /* VRT-App */,
 				45472FCF2349A39800EB74F4 /* Products */,
@@ -62,6 +69,16 @@
 				45472FDD2349A39A00EB74F4 /* Info.plist */,
 			);
 			path = "VRT-App";
+			sourceTree = "<group>";
+		};
+		45472FEB2349B7A000EB74F4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45472FE52349B74000EB74F4 /* ProgressReportsTableViewController.swift */,
+				45472FE72349B75F00EB74F4 /* AddReportViewController.swift */,
+				45472FE92349B77B00EB74F4 /* DetailsReportViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45472FEA2349B77B00EB74F4 /* DetailsReportViewController.swift in Sources */,
+				45472FE82349B75F00EB74F4 /* AddReportViewController.swift in Sources */,
+				45472FE62349B74000EB74F4 /* ProgressReportsTableViewController.swift in Sources */,
 				45472FE42349A79D00EB74F4 /* LogInView.swift in Sources */,
 				45472FD22349A39900EB74F4 /* AppDelegate.swift in Sources */,
 			);
