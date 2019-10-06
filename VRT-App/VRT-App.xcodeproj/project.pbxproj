@@ -15,6 +15,11 @@
 		45472FE62349B74000EB74F4 /* ProgressReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FE52349B74000EB74F4 /* ProgressReportsTableViewController.swift */; };
 		45472FE82349B75F00EB74F4 /* AddReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FE72349B75F00EB74F4 /* AddReportViewController.swift */; };
 		45472FEA2349B77B00EB74F4 /* DetailsReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FE92349B77B00EB74F4 /* DetailsReportViewController.swift */; };
+		45472FED234A453200EB74F4 /* GamesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FEC234A453200EB74F4 /* GamesCollectionViewController.swift */; };
+		45472FF1234A456900EB74F4 /* DetailsGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FF0234A456900EB74F4 /* DetailsGameViewController.swift */; };
+		45472FF3234A477300EB74F4 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FF2234A477300EB74F4 /* GameCollectionViewCell.swift */; };
+		45472FF5234A483900EB74F4 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FF4234A483900EB74F4 /* GameModel.swift */; };
+		45472FF9234A495800EB74F4 /* GameModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45472FF8234A495800EB74F4 /* GameModelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		45472FE52349B74000EB74F4 /* ProgressReportsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressReportsTableViewController.swift; sourceTree = "<group>"; };
 		45472FE72349B75F00EB74F4 /* AddReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReportViewController.swift; sourceTree = "<group>"; };
 		45472FE92349B77B00EB74F4 /* DetailsReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsReportViewController.swift; sourceTree = "<group>"; };
+		45472FEC234A453200EB74F4 /* GamesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewController.swift; sourceTree = "<group>"; };
+		45472FF0234A456900EB74F4 /* DetailsGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsGameViewController.swift; sourceTree = "<group>"; };
+		45472FF2234A477300EB74F4 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		45472FF4234A483900EB74F4 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		45472FF8234A495800EB74F4 /* GameModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,8 @@
 		45472FC52349A39800EB74F4 = {
 			isa = PBXGroup;
 			children = (
+				45472FF7234A493B00EB74F4 /* Model Controllers */,
+				45472FF6234A492F00EB74F4 /* Models */,
 				45472FEB2349B7A000EB74F4 /* View Controllers */,
 				45472FE32349A79D00EB74F4 /* LogInView.swift */,
 				45472FD02349A39800EB74F4 /* VRT-App */,
@@ -74,11 +86,30 @@
 		45472FEB2349B7A000EB74F4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				45472FF2234A477300EB74F4 /* GameCollectionViewCell.swift */,
+				45472FEC234A453200EB74F4 /* GamesCollectionViewController.swift */,
+				45472FF0234A456900EB74F4 /* DetailsGameViewController.swift */,
 				45472FE52349B74000EB74F4 /* ProgressReportsTableViewController.swift */,
 				45472FE72349B75F00EB74F4 /* AddReportViewController.swift */,
 				45472FE92349B77B00EB74F4 /* DetailsReportViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		45472FF6234A492F00EB74F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				45472FF4234A483900EB74F4 /* GameModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		45472FF7234A493B00EB74F4 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45472FF8234A495800EB74F4 /* GameModelController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +183,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45472FF3234A477300EB74F4 /* GameCollectionViewCell.swift in Sources */,
 				45472FEA2349B77B00EB74F4 /* DetailsReportViewController.swift in Sources */,
+				45472FF5234A483900EB74F4 /* GameModel.swift in Sources */,
+				45472FF1234A456900EB74F4 /* DetailsGameViewController.swift in Sources */,
 				45472FE82349B75F00EB74F4 /* AddReportViewController.swift in Sources */,
+				45472FED234A453200EB74F4 /* GamesCollectionViewController.swift in Sources */,
 				45472FE62349B74000EB74F4 /* ProgressReportsTableViewController.swift in Sources */,
+				45472FF9234A495800EB74F4 /* GameModelController.swift in Sources */,
 				45472FE42349A79D00EB74F4 /* LogInView.swift in Sources */,
 				45472FD22349A39900EB74F4 /* AppDelegate.swift in Sources */,
 			);

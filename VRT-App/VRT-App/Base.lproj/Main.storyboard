@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YhJ-IE-xTy"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="LogIn" id="RwY-Ut-Uiu"/>
+                    <tabBarItem key="tabBarItem" title="LogIn" image="man" id="RwY-Ut-Uiu"/>
                     <navigationItem key="navigationItem" id="Yxp-Q7-Fdo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8w-b0-Ti9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,7 +185,7 @@
         <scene sceneID="0oe-sq-00R">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ri1-36-iav" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Progress" id="Z20-To-qai"/>
+                    <tabBarItem key="tabBarItem" title="Progress" image="uptrend" id="Z20-To-qai"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OyV-oQ-2qh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -312,11 +312,12 @@
                         <segue destination="4Mk-PX-a5b" kind="relationship" relationship="viewControllers" id="Oez-VB-TGv"/>
                         <segue destination="Ri1-36-iav" kind="relationship" relationship="viewControllers" id="v6A-Ii-oF7"/>
                         <segue destination="Iez-gb-iIc" kind="relationship" relationship="viewControllers" id="zkb-Q4-Vs8"/>
+                        <segue destination="eJq-yD-gNC" kind="relationship" relationship="viewControllers" id="qW1-be-FCv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Aj-ga-WnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="441"/>
+            <point key="canvasLocation" x="-2191" y="2197"/>
         </scene>
         <!--Help-->
         <scene sceneID="Nqs-h5-AdN">
@@ -375,7 +376,7 @@
         <scene sceneID="nnh-U9-kHY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iez-gb-iIc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Help" id="rdR-8o-Qua"/>
+                    <tabBarItem key="tabBarItem" title="Help" image="bookmark" id="rdR-8o-Qua"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ftZ-Uc-KDi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -389,6 +390,108 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVF-Eb-Go8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="919" y="2014"/>
+        </scene>
+        <!--Games-->
+        <scene sceneID="dND-wN-bqc">
+            <objects>
+                <collectionViewController id="eJq-yD-gNC" customClass="GamesCollectionViewController" customModule="VRT_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="A3x-OW-WaN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="10" id="ybs-sU-Wck">
+                            <size key="itemSize" width="250" height="250"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" id="vSs-6I-VaA">
+                            <rect key="frame" x="0.0" y="-44" width="414" height="896"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameCell" id="Yfp-JN-nau" customClass="GameCollectionViewCell" customModule="VRT_App" customModuleProvider="target">
+                                <rect key="frame" x="82" y="10" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rQ-nG-LLr">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TuL-yv-q01">
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="TuL-yv-q01" secondAttribute="bottom" id="EqT-0L-pZG"/>
+                                                <constraint firstItem="TuL-yv-q01" firstAttribute="top" secondItem="7rQ-nG-LLr" secondAttribute="top" id="L3g-tK-Y6D"/>
+                                                <constraint firstItem="TuL-yv-q01" firstAttribute="leading" secondItem="7rQ-nG-LLr" secondAttribute="leading" id="Xds-n6-B3A"/>
+                                                <constraint firstAttribute="trailing" secondItem="TuL-yv-q01" secondAttribute="trailing" id="aS8-0k-7UJ"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7rQ-nG-LLr" secondAttribute="trailing" id="cYc-bf-ShI"/>
+                                    <constraint firstItem="7rQ-nG-LLr" firstAttribute="leading" secondItem="Yfp-JN-nau" secondAttribute="leading" id="e6V-th-eoB"/>
+                                    <constraint firstAttribute="bottom" secondItem="7rQ-nG-LLr" secondAttribute="bottom" id="fQd-t1-HXY"/>
+                                    <constraint firstItem="7rQ-nG-LLr" firstAttribute="top" secondItem="Yfp-JN-nau" secondAttribute="top" id="qLw-H8-7dr"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="gameImage" destination="TuL-yv-q01" id="qcK-EF-Ao3"/>
+                                    <segue destination="5an-3H-0zR" kind="show" identifier="GameDetailSegue" id="UAP-Xb-dVY"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="eJq-yD-gNC" id="Jv9-EC-iqL"/>
+                            <outlet property="delegate" destination="eJq-yD-gNC" id="Xyz-27-3os"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Games" image="glasses" id="zJJ-pB-sou"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABM-0M-67U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915.94202898550736" y="2765.625"/>
+        </scene>
+        <!--Details Game View Controller-->
+        <scene sceneID="NuS-7q-utp">
+            <objects>
+                <viewController id="5an-3H-0zR" customClass="DetailsGameViewController" customModule="VRT_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fJm-2e-HZE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="aja-B7-PY5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kAw-Gi-obo">
+                                <rect key="frame" x="57" y="128" width="300" height="300"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kAw-Gi-obo" firstAttribute="top" secondItem="a8L-10-JrA" secondAttribute="top" constant="84" id="HIW-Nk-SZ4"/>
+                            <constraint firstItem="kAw-Gi-obo" firstAttribute="leading" secondItem="a8L-10-JrA" secondAttribute="leading" constant="57" id="MKO-AL-Qaq"/>
+                            <constraint firstItem="aja-B7-PY5" firstAttribute="leading" secondItem="a8L-10-JrA" secondAttribute="leading" id="OZB-PC-52i"/>
+                            <constraint firstItem="aja-B7-PY5" firstAttribute="top" secondItem="fJm-2e-HZE" secondAttribute="top" id="QPU-IJ-94R"/>
+                            <constraint firstAttribute="bottom" secondItem="aja-B7-PY5" secondAttribute="bottom" id="dqJ-lR-9Aw"/>
+                            <constraint firstItem="a8L-10-JrA" firstAttribute="trailing" secondItem="kAw-Gi-obo" secondAttribute="trailing" constant="57" id="pKS-UF-vO8"/>
+                            <constraint firstItem="aja-B7-PY5" firstAttribute="trailing" secondItem="a8L-10-JrA" secondAttribute="trailing" id="rmb-up-QGA"/>
+                            <constraint firstItem="a8L-10-JrA" firstAttribute="bottom" secondItem="kAw-Gi-obo" secondAttribute="bottom" constant="434" id="tP8-gi-MqH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a8L-10-JrA"/>
+                    </view>
+                    <connections>
+                        <outlet property="gameImage" destination="kAw-Gi-obo" id="Gh7-Om-fIB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mU3-Oq-RBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.913043478261" y="2765.625"/>
         </scene>
         <!--Help-->
         <scene sceneID="lZa-mN-jpS">
@@ -506,6 +609,10 @@
         <image name="Background1" width="1125" height="2436"/>
         <image name="Game" width="512" height="512"/>
         <image name="VRQuestion" width="512" height="512"/>
+        <image name="bookmark" width="30" height="30"/>
+        <image name="glasses" width="30" height="30"/>
+        <image name="man" width="30" height="30"/>
         <image name="progress" width="275" height="275"/>
+        <image name="uptrend" width="30" height="30"/>
     </resources>
 </document>
