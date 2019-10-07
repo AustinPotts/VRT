@@ -11,10 +11,24 @@ import UIKit
 class DetailsGameViewController: UIViewController {
 
     @IBOutlet weak var gameImage: UIImageView!
+    
+    var game: Game?
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
+    }
+    
+    
+    
+    func updateViews(){
+        if let game = game {
+        gameImage.image = game.gameImage
+        }
     }
     
 

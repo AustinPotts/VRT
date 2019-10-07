@@ -27,15 +27,24 @@ class GamesCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "GameDetailSegue"{
+            guard let indexPath = collectionView.indexPathsForSelectedItems?.first?.item,
+                let gameChosenVC = segue.destination as? DetailsGameViewController else{return}
+            
+            let gameChosen = gameController.gameShown[indexPath]
+            gameChosenVC.game = gameChosen
+            
+        }
+        
+        
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
 
